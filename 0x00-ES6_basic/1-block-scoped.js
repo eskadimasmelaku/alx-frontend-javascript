@@ -1,13 +1,11 @@
 export default function taskBlock(trueOrFalse) {
-  const task = false;
+  const task = false;  // Use const to ensure these are not reassigned
   const task2 = true;
 
-  /* eslint-disable no-unused-vars */
   if (trueOrFalse) {
-    const task = true;
-    const task2 = false;
+    let task = true;   // Use let to ensure block-scoping
+    let task2 = false; // Use let to ensure block-scoping
   }
-  /* eslint-enable no-unused-vars */
 
   return [task, task2];
 }
