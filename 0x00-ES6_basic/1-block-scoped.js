@@ -1,10 +1,12 @@
 export default function taskBlock(trueOrFalse) {
-  const task = false;  // Use const to ensure these are not reassigned
+  const task = false;
   const task2 = true;
 
   if (trueOrFalse) {
-    let task = true;   // Use let to ensure block-scoping
-    let task2 = false; // Use let to ensure block-scoping
+    // Using different variable names for the block-scoped variables
+    const taskInBlock = true;
+    const task2InBlock = false;
+    // These variables are not used outside of this block
   }
 
   return [task, task2];
